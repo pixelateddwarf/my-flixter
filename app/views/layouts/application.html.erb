@@ -27,7 +27,11 @@
         <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'A user is signed in!', '#' %></li>
+      <% else %>
+        <li><%= link_to 'No user is signed in :(', '#' %></li>
+      <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
